@@ -25,6 +25,7 @@
 *.log
 *.swp
 *.swo
+test.html
 
 # Ignore compiled files and directories
 /dist/
