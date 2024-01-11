@@ -77,7 +77,7 @@ if (document.querySelector('.fixed-plugin')) {
   var fixedPluginCloseButton = document.querySelectorAll('.fixed-plugin-close-button');
   var navbar = document.getElementById('navbarBlur');
   var buttonNavbarFixed = document.getElementById('navbarFixed');
-
+  
   if (fixedPluginButton) {
     fixedPluginButton.onclick = function() {
       if (!fixedPlugin.classList.contains('show')) {
@@ -584,14 +584,21 @@ function darkMode(el) {
   const navLinks = document.querySelectorAll('.navbar-main .nav-link, .navbar-main .breadcrumb-item, .navbar-main .breadcrumb-item a, .navbar-main h6');
   const cardNavLinksIcons = document.querySelectorAll('.card .nav .nav-link i');
   const cardNavSpan = document.querySelectorAll('.card .nav .nav-link span');
+  // Get the dark mode 'moon' icon
+  const darkModeIcon = document.querySelector('.dark-mode-icon');
 
 
   if (!el.getAttribute("checked")) {
     body.classList.add('dark-version');
-    if (navbarBrandImg.includes('logo-ct-dark.png')) {
-      var navbarBrandImgNew = navbarBrandImg.replace("logo-ct-dark", "logo-ct");
+    // Set the white PW logo
+    if (navbarBrandImg.includes('pw_logo2.png')) {
+      var navbarBrandImgNew = navbarBrandImg.replace("pw_logo2", "pw_logo2_white");
       navbarBrand.src = navbarBrandImgNew;
     }
+    // Set the dark mode icon
+    darkModeIcon.classList.remove('bi-moon-stars');
+    darkModeIcon.classList.add('bi-moon-stars-fill');
+
     for (var i = 0; i < cardNavLinksIcons.length; i++) {
       if (cardNavLinksIcons[i].classList.contains('text-dark')) {
         cardNavLinksIcons[i].classList.remove('text-dark');
@@ -671,10 +678,15 @@ function darkMode(el) {
   } else {
     body.classList.remove('dark-version');
     sidebar.classList.add('bg-white');
+    // Set the black PW logo
     if (navbarBrandImg.includes('logo-ct.png')) {
       var navbarBrandImgNew = navbarBrandImg.replace("logo-ct", "logo-ct-dark");
       navbarBrand.src = navbarBrandImgNew;
     }
+    // Set the dark mode icon
+    darkModeIcon.classList.remove('bi-moon-stars-fill');
+    darkModeIcon.classList.add('bi-moon-stars');
+
     for (var i = 0; i < navLinks.length; i++) {
       if (navLinks[i].classList.contains('text-dark')) {
         navLinks[i].classList.add('text-white');
