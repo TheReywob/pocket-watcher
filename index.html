@@ -21,16 +21,21 @@
     <link id="pagestyle" href="./assets/css/argon-dashboard.css?v=2.0.4" rel="stylesheet" />
     <!-- Connor's custom CSS styles -->
     <style>
-      
+      .custom-toggler-line {
+        height: 4px !important;
+        width: 25px;
+        margin: 5px 0;
+      }
     </style>
   </head>
 
+  <!-- Side bar -->
   <body class="g-sidenav-show bg-gray-100">
     <div class="min-height-300 bg-primary position-absolute w-100"></div>
     <aside class="sidenav bg-white navbar navbar-vertical navbar-expand-xs border-0 border-radius-xl my-3 fixed-start ms-4" id="sidenav-main">
       <div class="sidenav-header">
         <i class="fas fa-times p-3 cursor-pointer text-secondary opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
-        <a class="navbar-brand m-0" href="#" target="_blank">
+        <a class="navbar-brand m-0" href="https://pocketwatcher.reywob.net" target="_blank">
           <img src="./assets/img/logos/pw_logo2.png" class="navbar-brand-img h-100" alt="main_logo">
           <span class="ms-1 font-weight-bold">Pocket Watcher</span>
         </a>
@@ -41,7 +46,7 @@
           <li class="nav-item">
             <a class="nav-link active" href="./pages/dashboard.html">
               <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                <i class="bi bi-speedometer text-lg text-danger opacity-10 pb-1"></i>
+                <i class="bi bi-columns-gap text-lg text-primary opacity-10 pb-1"></i>
               </div>
               <span class="nav-link-text ms-1">Dashboard</span>
             </a>
@@ -49,7 +54,7 @@
           <li class="nav-item">
             <a class="nav-link" href="./pages/tables.html">
               <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                <i class="ni ni-calendar-grid-58 text-warning text-sm opacity-10"></i>
+                <i class="bi bi-calendar2-week text-danger text-lg opacity-10 pb-1"></i>
               </div>
               <span class="nav-link-text ms-1">Budget</span>
             </a>
@@ -57,15 +62,23 @@
           <li class="nav-item">
             <a class="nav-link" href="./pages/dashboard.html">
               <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                <i class="ni ni-tv-2 text-success text-sm opacity-10"></i>
+                <i class="bi bi-bar-chart text-success text-lg opacity-10 pb-1"></i>
               </div>
               <span class="nav-link-text ms-1">Net Worth</span>
             </a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="./pages/dashboard.html">
+              <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
+                <i class="bi bi-wallet2 text-warning text-lg opacity-10 pb-1"></i>
+              </div>
+              <span class="nav-link-text ms-1">Savings</span>
+            </a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link" href="./pages/billing.html">
               <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
+                <i class="bi bi-person-vcard text-info text-lg opacity-10 pb-1"></i>
               </div>
               <span class="nav-link-text ms-1">Accounts</span>
             </a>
@@ -73,18 +86,18 @@
           <li class="nav-item">
             <a class="nav-link" href="./pages/billing.html">
               <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                <i class="ni ni-credit-card text-success text-sm opacity-10"></i>
+                <i class="bi bi-info-circle text-secondary text-lg opacity-10 pb-1"></i>
               </div>
-              <span class="nav-link-text ms-1">Tip of the Day</span>
+              <span class="nav-link-text ms-1">Suggestions</span>
             </a>
           </li>
           <li class="nav-item mt-3">
             <h6 class="ps-4 ms-2 text-uppercase text-xs font-weight-bolder opacity-6">Account pages</h6>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="./pages/profile.html">
+            <a class="nav-link" href="./pages/profile.html">
               <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                <i class="ni ni-single-02 text-dark text-sm opacity-10"></i>
+                <i class="bi bi-person-circle text-primary text-lg opacity-10 pb-1"></i>
               </div>
               <span class="nav-link-text ms-1">Profile</span>
             </a>
@@ -92,42 +105,45 @@
           <li class="nav-item">
             <a class="nav-link" href="./pages/sign-in.html">
               <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                <i class="ni ni-single-copy-04 text-warning text-sm opacity-10"></i>
+                <i class="bi bi-moon-stars text-dark text-lg opacity-10 pb-1"></i>
               </div>
-              <span class="nav-link-text ms-1">Sign In</span>
+              <span class="nav-link-text ms-1">Dark Mode</span>
             </a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="./pages/sign-up.html">
               <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-                <i class="ni ni-collection text-info text-sm opacity-10"></i>
+                <i class="bi bi-box-arrow-left text-danger text-lg opacity-10 pb-1"></i>
               </div>
-              <span class="nav-link-text ms-1">Sign Up</span>
+              <span class="nav-link-text ms-1">Sign Out</span>
             </a>
           </li>
         </ul>
       </div>
     </aside>
+    <!-- End of sidebar -->
+
     <main class="main-content position-relative border-radius-lg">
       <!-- Navbar -->
       <nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur" data-scroll="false">
         <div class="container-fluid py-1 px-3">
           <nav aria-label="breadcrumb">
-            <h6 class="font-weight-bolder text-white mb-0">Dashboard</h6>
+            <h6 class="font-weight-bolder text-white mb-0 text-2xl">Dashboard</h6>
           </nav>
           <div class="collapse navbar-collapse mt-sm-0 mt-2 me-md-0 me-sm-4" id="navbar">
             <div class="ms-md-auto pe-md-3 d-flex align-items-center"></div>
             <ul class="navbar-nav justify-content-end">
-              <li class="nav-item dropdown pe-2 d-flex align-items-center">
+              <!--- Dropdown example -->
+              <li class="nav-item dropdown d-flex align-items-center">
                 <a href="javascript:;" class="nav-link text-white p-0" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="bi bi-eye-slash-fill cursor-pointer"></i>
+                  <i class="bi bi-eye-slash-fill cursor-pointer text-2xl"></i>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end px-2 py-3 me-sm-n4" aria-labelledby="dropdownMenuButton">
                   <li class="mb-2">
                     <a class="dropdown-item border-radius-md" href="javascript:;">
                       <div class="d-flex py-1">
                         <div class="my-auto">
-                          <img src="./assets/img/team-2.jpg" class="avatar avatar-sm me-3 ">
+                          <img src="./assets/img/team-2.jpg" class="avatar avatar-sm me-3">
                         </div>
                         <div class="d-flex flex-column justify-content-center">
                           <h6 class="text-sm font-weight-normal mb-1"><span class="font-weight-bold">New message</span>from Laura</h6>
@@ -176,23 +192,24 @@
                   </li>
                 </ul>
               </li>
-              <li class="nav-item px-3 d-flex align-items-center">
+              <!-- End dropdown example-->
+              <li class="nav-item ps-3 d-flex align-items-center">
                 <a href="javascript:;" class="nav-link text-white p-0">
-                  <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer"></i>
+                  <i class="fa fa-cog fixed-plugin-button-nav cursor-pointer text-2xl"></i>
                 </a>
               </li>
-              <li class="nav-item d-flex align-items-center">
+              <li class="nav-item ps-3 d-flex align-items-center">
                 <a href="javascript:;" class="nav-link text-white font-weight-bold px-0">
-                  <i class="fa fa-user me-sm-1"></i>
-                  <span class="d-sm-inline d-none">Hi, Connor</span>
+                  <i class="fa fa-user me-sm-1 text-2xl"></i>
+                  <!-- <span class="d-sm-inline d-none text-2xl">Hi, Connor</span> -->
                 </a>
               </li>
-              <li class="nav-item d-xl-none ps-3 d-flex align-items-center">
+              <li class="nav-item d-xl-none ps-3 pb-1 d-flex align-items-center">
                 <a href="javascript:;" class="nav-link text-white p-0" id="iconNavbarSidenav">
                   <div class="sidenav-toggler-inner">
-                    <i class="sidenav-toggler-line bg-white"></i>
-                    <i class="sidenav-toggler-line bg-white"></i>
-                    <i class="sidenav-toggler-line bg-white"></i>
+                    <i class="sidenav-toggler-line bg-white custom-toggler-line"></i>
+                    <i class="sidenav-toggler-line bg-white custom-toggler-line"></i>
+                    <i class="sidenav-toggler-line bg-white custom-toggler-line"></i>
                   </div>
                 </a>
               </li>
@@ -346,19 +363,19 @@
                       <td>
                         <div class="text-center">
                           <p class="text-xs font-weight-bold mb-0">Target:</p>
-                          <h6 class="text-sm mb-0">5%</h6>
+                          <h6 class="text-sm mb-0">$123.45</h6>
                         </div>
                       </td>
                       <td>
                         <div class="text-center">
                           <p class="text-xs font-weight-bold mb-0">Spent:</p>
-                          <h6 class="text-sm mb-0">1%</h6>
+                          <h6 class="text-sm mb-0">$12.34</h6>
                         </div>
                       </td>
                       <td class="align-middle text-sm">
                         <div class="col text-center">
                           <p class="text-xs font-weight-bold mb-0">Remaining:</p>
-                          <h6 class="text-sm mb-0">4%</h6>
+                          <h6 class="text-sm mb-0">$1.23</h6>
                         </div>
                       </td>
                     </tr>
@@ -465,20 +482,20 @@
                       </td>
                       <td>
                         <div class="text-center">
-                          <p class="text-xs font-weight-bold mb-0">Sales:</p>
-                          <h6 class="text-sm mb-0">562</h6>
+                          <p class="text-xs font-weight-bold mb-0">Target:</p>
+                          <h6 class="text-sm mb-0">5%</h6>
                         </div>
                       </td>
                       <td>
                         <div class="text-center">
-                          <p class="text-xs font-weight-bold mb-0">Value:</p>
-                          <h6 class="text-sm mb-0">$143,960</h6>
+                          <p class="text-xs font-weight-bold mb-0">Spent:</p>
+                          <h6 class="text-sm mb-0">1%</h6>
                         </div>
                       </td>
                       <td class="align-middle text-sm">
                         <div class="col text-center">
-                          <p class="text-xs font-weight-bold mb-0">Bounce:</p>
-                          <h6 class="text-sm mb-0">32.14%</h6>
+                          <p class="text-xs font-weight-bold mb-0">Remaining:</p>
+                          <h6 class="text-sm mb-0">4%</h6>
                         </div>
                       </td>
                     </tr>
@@ -495,20 +512,20 @@
                       </td>
                       <td>
                         <div class="text-center">
-                          <p class="text-xs font-weight-bold mb-0">Sales:</p>
-                          <h6 class="text-sm mb-0">562</h6>
+                          <p class="text-xs font-weight-bold mb-0">Target:</p>
+                          <h6 class="text-sm mb-0">5%</h6>
                         </div>
                       </td>
                       <td>
                         <div class="text-center">
-                          <p class="text-xs font-weight-bold mb-0">Value:</p>
-                          <h6 class="text-sm mb-0">$143,960</h6>
+                          <p class="text-xs font-weight-bold mb-0">Spent:</p>
+                          <h6 class="text-sm mb-0">1%</h6>
                         </div>
                       </td>
                       <td class="align-middle text-sm">
                         <div class="col text-center">
-                          <p class="text-xs font-weight-bold mb-0">Bounce:</p>
-                          <h6 class="text-sm mb-0">32.14%</h6>
+                          <p class="text-xs font-weight-bold mb-0">Remaining:</p>
+                          <h6 class="text-sm mb-0">4%</h6>
                         </div>
                       </td>
                     </tr>
@@ -525,20 +542,20 @@
                       </td>
                       <td>
                         <div class="text-center">
-                          <p class="text-xs font-weight-bold mb-0">Sales:</p>
-                          <h6 class="text-sm mb-0">562</h6>
+                          <p class="text-xs font-weight-bold mb-0">Target:</p>
+                          <h6 class="text-sm mb-0">5%</h6>
                         </div>
                       </td>
                       <td>
                         <div class="text-center">
-                          <p class="text-xs font-weight-bold mb-0">Value:</p>
-                          <h6 class="text-sm mb-0">$143,960</h6>
+                          <p class="text-xs font-weight-bold mb-0">Spent:</p>
+                          <h6 class="text-sm mb-0">1%</h6>
                         </div>
                       </td>
                       <td class="align-middle text-sm">
                         <div class="col text-center">
-                          <p class="text-xs font-weight-bold mb-0">Bounce:</p>
-                          <h6 class="text-sm mb-0">32.14%</h6>
+                          <p class="text-xs font-weight-bold mb-0">Remaining:</p>
+                          <h6 class="text-sm mb-0">4%</h6>
                         </div>
                       </td>
                     </tr>
@@ -938,6 +955,10 @@
             legend: {
               display: true,
               position: 'right',
+              labels: {
+                usePointStyle: true, // This option uses Bootstrap point style
+                boxWidth: 8, // Adjust the box width as needed
+              }
             }
           }
         }
@@ -974,7 +995,7 @@
         maintainAspectRatio: false,
         plugins: {
           legend: {
-            display: false,
+            display: true,
           }
         },
         interaction: {
