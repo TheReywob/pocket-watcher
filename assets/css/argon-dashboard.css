@@ -22331,7 +22331,8 @@ hr.horizontal.gray-light {
 }
 
 .navbar .sidenav-toggler-inner {
-  width: 18px;
+  width: auto;
+  padding: 5px;
 }
 
 .navbar .sidenav-toggler-inner .sidenav-toggler-line {
