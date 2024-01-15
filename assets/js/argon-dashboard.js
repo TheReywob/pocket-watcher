@@ -585,7 +585,7 @@ function darkMode(el) {
   const cardNavLinksIcons = document.querySelectorAll('.card .nav .nav-link i');
   const cardNavSpan = document.querySelectorAll('.card .nav .nav-link span');
   // Get the dark mode 'moon' icon
-  const darkModeIcon = document.querySelector('.dark-mode-icon');
+  const darkModeIcon = document.getElementById('darkModeIcon');
 
 
   if (!el.getAttribute("checked")) {
@@ -679,8 +679,8 @@ function darkMode(el) {
     body.classList.remove('dark-version');
     sidebar.classList.add('bg-white');
     // Set the black PW logo
-    if (navbarBrandImg.includes('logo-ct.png')) {
-      var navbarBrandImgNew = navbarBrandImg.replace("logo-ct", "logo-ct-dark");
+    if (navbarBrandImg.includes('pw_logo2_white.png')) {
+      var navbarBrandImgNew = navbarBrandImg.replace("pw_logo2_white", "pw_logo2");
       navbarBrand.src = navbarBrandImgNew;
     }
     // Set the dark mode icon
@@ -738,7 +738,8 @@ function darkMode(el) {
       if (secondary[i].classList.contains('text-white')) {
         secondary[i].classList.remove('text-white');
         secondary[i].classList.remove('opacity-8');
-        secondary[i].classList.add('text-dark');
+        secondary[i].classList.add('text-secondary');
+        secondary[i].classList.add('opacity-10');
       }
     }
     for (var i = 0; i < bg_gray_600.length; i++) {
