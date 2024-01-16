@@ -559,7 +559,7 @@ function getEventTarget(e) {
 // End tabs navigation
 
 // Light Mode / Dark Mode
-function darkMode(el) {
+function darkMode() {
   const body = document.getElementsByTagName('body')[0];
   const hr = document.querySelectorAll('div:not(.sidenav) > hr');
   const sidebar = document.querySelector('.sidenav');
@@ -584,21 +584,22 @@ function darkMode(el) {
   const navLinks = document.querySelectorAll('.navbar-main .nav-link, .navbar-main .breadcrumb-item, .navbar-main .breadcrumb-item a, .navbar-main h6');
   const cardNavLinksIcons = document.querySelectorAll('.card .nav .nav-link i');
   const cardNavSpan = document.querySelectorAll('.card .nav .nav-link span');
-  // Get the dark mode 'moon' icon
-  const darkModeIcon = document.getElementById('darkModeIcon');
+  // Get the dark mode icons
+  const darkModeIcons = document.querySelectorAll('.dark-mode-icon');
+  console.log(darkModeIcons);
 
-
-  if (!el.getAttribute("checked")) {
+  if (darkModeIcons[0].classList.contains('bi-moon-stars')) {
     body.classList.add('dark-version');
+    // Set the dark mode icon
+    for (var i = 0; i < darkModeIcons.length; i++) {
+      darkModeIcons[i].classList.remove('bi-moon-stars');
+      darkModeIcons[i].classList.add('bi-moon-stars-fill');
+    }
     // Set the white PW logo
     if (navbarBrandImg.includes('pw_logo2.png')) {
       var navbarBrandImgNew = navbarBrandImg.replace("pw_logo2", "pw_logo2_white");
       navbarBrand.src = navbarBrandImgNew;
     }
-    // Set the dark mode icon
-    darkModeIcon.classList.remove('bi-moon-stars');
-    darkModeIcon.classList.add('bi-moon-stars-fill');
-
     for (var i = 0; i < cardNavLinksIcons.length; i++) {
       if (cardNavLinksIcons[i].classList.contains('text-dark')) {
         cardNavLinksIcons[i].classList.remove('text-dark');
@@ -674,19 +675,19 @@ function darkMode(el) {
     for (var i = 0; i < card_border.length; i++) {
       card_border[i].classList.add('border-dark');
     }
-    el.setAttribute("checked", "true");
   } else {
     body.classList.remove('dark-version');
     sidebar.classList.add('bg-white');
-    // Set the black PW logo
+    // Set the dark mode icon
+    for (var i = 0; i < darkModeIcons.length; i++) {
+      darkModeIcons[i].classList.remove('bi-moon-stars-fill');
+      darkModeIcons[i].classList.add('bi-moon-stars');
+    }
+    // Set the white PW logo
     if (navbarBrandImg.includes('pw_logo2_white.png')) {
-      var navbarBrandImgNew = navbarBrandImg.replace("pw_logo2_white", "pw_logo2");
+      var navbarBrandImgNew = navbarBrandImg.replace("pw_logo2", "pw_logo2_white");
       navbarBrand.src = navbarBrandImgNew;
     }
-    // Set the dark mode icon
-    darkModeIcon.classList.remove('bi-moon-stars-fill');
-    darkModeIcon.classList.add('bi-moon-stars');
-
     for (var i = 0; i < navLinks.length; i++) {
       if (navLinks[i].classList.contains('text-dark')) {
         navLinks[i].classList.add('text-white');
@@ -762,6 +763,5 @@ function darkMode(el) {
     for (var i = 0; i < card_border_dark.length; i++) {
       card_border_dark[i].classList.remove('border-dark');
     }
-    el.removeAttribute("checked");
   }
 };
