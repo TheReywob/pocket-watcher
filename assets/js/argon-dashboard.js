@@ -685,7 +685,7 @@ function darkMode() {
     }
     // Set the white PW logo
     if (navbarBrandImg.includes('pw_logo2_white.png')) {
-      var navbarBrandImgNew = navbarBrandImg.replace("pw_logo2", "pw_logo2_white");
+      var navbarBrandImgNew = navbarBrandImg.replace("pw_logo2_white", "pw_logo2");
       navbarBrand.src = navbarBrandImgNew;
     }
     for (var i = 0; i < navLinks.length; i++) {
