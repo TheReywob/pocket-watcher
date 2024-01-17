@@ -25,7 +25,7 @@
       width: 25px;
       margin: 5px 0;
     }
-      .custom-badge-green {
+    .custom-badge-green {
       color: #2dce89; /* Text color */
       background-color: white; /* Background color */
       border: 1px solid #2dce89; /* Border color */
@@ -39,6 +39,11 @@
       color: #f5365c; /* Text color */
       background-color: white; /* Background color */
       border: 1px solid #f5365c; /* Border color */
+    }
+    .custom-badge-black {
+      color: #000; /* Text color */
+      background-color: transparent; /* Background color */
+      border: 1px solid #000; /* Border color */
     }
   </style>
 </head>
@@ -92,7 +97,7 @@
         <li class="nav-item">
           <a class="nav-link active">
             <div class="icon icon-shape icon-sm border-radius-md text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="bi bi-person-vcard text-info text-lg opacity-10 pb-1"></i>
+              <i class="bi bi-safe text-info text-lg opacity-10 pb-1"></i>
             </div>
             <span class="nav-link-text ms-1">Accounts</span>
           </a>
@@ -218,200 +223,83 @@
     </nav>
     <!-- End Navbar -->
 
-    <!-- -->
+ 
     <div class="container-fluid py-4">
-      <div class="row">
-        <!-- Mini tiles -->
-        <div class="col-2">
-          <div class="row">
-            <div class="card">
-              <div class="card-body p-3">
-                <div class="row">
-                  <div class="col-8">
-                    <div class="numbers">
-                      <p class="text-sm mb-0 text-uppercase font-weight-bold">Number of Accounts</p>
-                      <h5 class="font-weight-bolder text-3xl">16</h5>
-                    </div>
-                  </div>
-                  <div class="col-4 text-end">
-                    <div class="icon icon-shape bg-gradient-primary shadow-primary text-center rounded-circle">
-                      <i class="bi bi-bank2 opacity-10" aria-hidden="true"></i>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="card mt-4">
-              <div class="card-body p-3">
-                <div class="row">
-                    <div class="numbers">
-                      <p class="text-sm mb-0 text-uppercase font-weight-bold">Status</p>
-                      <hr class="horizontal dark my-2 mb-3">
-                      <h5 class="font-weight-bolder">4&nbsp;&nbsp;<span class="badge badge-sm custom-badge-green text-xxs">Linked</span></h5>
-                      <h5 class="font-weight-bolder">1&nbsp;&nbsp;<span class="badge badge-sm custom-badge-red text-xxs">Disconnected</span></h5>
-                      <h5 class="font-weight-bolder">2&nbsp;&nbsp;<span class="badge badge-sm custom-badge-grey text-xxs">Manual</span></h5>
-                    </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End mini tiles -->
-
-
-
-        <!-- Categories Table -->
-        <div class="col-lg-6">
-          <div class="card">
-            <div class="card-header pb-2 p-3">
-              <div class="row">
-                <div class="col-6 d-flex align-items-center">
-                  <h6 class="ps-2">Categories</h6>
-                </div>
-              </div>
-            </div>
-            <div class="table-responsive">
-              <table class="table align-items-center">
-                <thead>
-                  <tr>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Category</th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Balance</th>
-                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Accounts</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>
-                      <div class="text-center py-1 align-items-center">
-                        <h6 class="text-sm mb-0">Checking</h6>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="text-center align-items-center">
-                        <h6 class="text-sm mb-0">$123.45</h6>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="text-center">
-                        <h6 class="text-sm mb-0 font-weight-bolder">4</h6>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="text-center py-1 align-items-center">
-                        <h6 class="text-sm mb-0">Savings</h6>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="text-center align-items-center">
-                        <h6 class="text-sm mb-0">$123.45</h6>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="text-center">
-                        <h6 class="text-sm mb-0 font-weight-bolder">3</h6>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="text-center py-1 align-items-center">
-                        <h6 class="text-sm mb-0">Investing</h6>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="text-center align-items-center">
-                        <h6 class="text-sm mb-0">$123.45</h6>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="text-center">
-                        <h6 class="text-sm mb-0 font-weight-bolder">4</h6>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="text-center py-1 align-items-center">
-                        <h6 class="text-sm mb-0">Credit Cards</h6>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="text-center align-items-center">
-                        <h6 class="text-sm mb-0">$123.45</h6>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="text-center">
-                        <h6 class="text-sm mb-0 font-weight-bolder">4</h6>
-                      </div>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td>
-                      <div class="text-center py-1 align-items-center">
-                        <h6 class="text-sm mb-0">Loans</h6>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="text-center align-items-center">
-                        <h6 class="text-sm mb-0">$123.45</h6>
-                      </div>
-                    </td>
-                    <td>
-                      <div class="text-center">
-                        <h6 class="text-sm mb-0 font-weight-bolder">4</h6>
-                      </div>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
-        <!-- End Categories Table -->
-
-        <!-- Chart tile -->
-        <div class="col-4">
-          <div class="card z-index-2 h-100">
-            <div class="card-header pb-0 pt-3 bg-transparent position-relative">
-              <div class="row">
-                <div class="col-6">
-                  <h6>Account Types</h6>
-                </div>
-                <div class="col-6 text-end">
-                  <i class="bi bi-three-dots"></i>
-                </div>
-              </div>
-            </div>
-            <div class="card-body p-3">
-              <div class="chart">
-                <canvas id="accounts-chart" class="chart-canvas" height="300"></canvas>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- End Chart tile-->
-      </div>
-
-      <hr class="horizontal dark my-4">
-      <a class="btn bg-gradient-success mb-3" href="javascript:;"><i class="fas fa-plus"></i>&nbsp;&nbsp;Add Account</a>
-
+      <a class="btn bg-gradient-dark mb-3 text-lg" href="javascript:;"><i class="fas fa-plus"></i>&nbsp;&nbsp;Add Account</a>
+      <!-- No accounts message -->
+      <h3 class="text-white">No accounts added.</h3>
+      <p class="text-white">You haven't added any banks or finance accounts yet. Click <span class="font-weight-bolder">+ Add Account</span> to connect your financial institution with ___.</p>
       <!-- Accounts Section -->
-      <div class="row mb-6">
-        <div class="col-4">
+      <div class="row">
+        <div class="col-lg-6 mb-4">
           <div class="card bg-transparent shadow-xl">
             <div class="overflow-hidden position-relative border-radius-xl">
               <div class="card-header p-3 position-relative" style="background-color: #9A0E22;">
                 <div class="row align-items-center">
-                  <div class="col-6">
+                  <div class="col-10">
                     <img src="../assets/img/logos/boa.png" class="avatar avatar-sm me-3">
-                    <h6 class="text-white d-lg-inline">Bank of America</h6>
+                    <h6 class="text-white d-inline">Bank of America</h6>
                   </div>
-                  <div class="col-6 text-end">
+                  <div class="col-2 text-end">
+                    <i class="bi bi-three-dots text-white me-2"></i>
+                  </div>
+                </div>
+              </div>
+              <div class="card-body bg-white position-relative z-index-1 p-3">
+                <table class="table align-items-center">
+                  <tbody>
+                    <tr>
+                      <td class="w-30 ps-3">
+                        <div class="d-flex px-2 py-1 align-items-center">
+                          <h6 class="text-sm mb-0">Checking</h6>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="text-center">
+                          <h6 class="text-sm mb-0">xxxx7852</h6>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="text-center">
+                          <h6 class="text-sm mb-0">$15,569,552.22</h6>
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="w-30 ps-3">
+                        <div class="d-flex px-2 py-1 align-items-center">
+                          <h6 class="text-sm mb-0">Cash Rewards Visa</h6>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="text-center">
+                          <h6 class="text-sm mb-0">xxxx4562</h6>
+                        </div>
+                      </td>
+                      <td>
+                        <div class="text-center">
+                          <h6 class="text-sm mb-0">$0.00</h6>
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <p class="text-xs m-0 ps-2" style="color: #ccc"><span class="badge badge-sm custom-badge-green text-xxs">Linked</span>&nbsp;&nbsp;Last checked 5 hours ago</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6 mb-4">
+          <div class="card bg-transparent shadow-xl">
+            <div class="overflow-hidden position-relative border-radius-xl">
+              <div class="card-header p-3 position-relative" style="background-color: #9A0E22;">
+                <div class="row align-items-center">
+                  <div class="col-10">
+                    <img src="../assets/img/logos/boa.png" class="avatar avatar-sm me-3">
+                    <h6 class="text-white d-inline">Bank of America</h6>
+                  </div>
+                  <div class="col-2 text-end">
                     <i class="bi bi-three-dots text-white me-2"></i>
                   </div>
                 </div>
@@ -460,17 +348,17 @@
             </div>
           </div>
         </div>
-        
-        <div class="col-4">
+
+        <div class="col-lg-6 mb-4">
           <div class="card bg-transparent shadow-xl">
             <div class="overflow-hidden position-relative border-radius-xl">
               <div class="card-header p-3 position-relative" style="background-color: #9A0E22;">
                 <div class="row align-items-center">
-                  <div class="col-6">
+                  <div class="col-10">
                     <img src="../assets/img/logos/boa.png" class="avatar avatar-sm me-3">
-                    <h6 class="text-white d-lg-inline">Bank of America</h6>
+                    <h6 class="text-white d-inline">Bank of America</h6>
                   </div>
-                  <div class="col-6 text-end">
+                  <div class="col-2 text-end">
                     <i class="bi bi-three-dots text-white me-2"></i>
                   </div>
                 </div>
@@ -514,21 +402,22 @@
                     </tr>
                   </tbody>
                 </table>
+                <p class="text-xs m-0 ps-2" style="color: #ccc"><span class="badge badge-sm custom-badge-green text-xxs">Linked</span>&nbsp;&nbsp;Last checked 5 hours ago</p>
               </div>
             </div>
           </div>
         </div>
 
-        <div class="col-4">
+        <div class="col-lg-6 mb-4">
           <div class="card bg-transparent shadow-xl">
             <div class="overflow-hidden position-relative border-radius-xl">
               <div class="card-header p-3 position-relative" style="background-color: #9A0E22;">
                 <div class="row align-items-center">
-                  <div class="col-6">
+                  <div class="col-10">
                     <img src="../assets/img/logos/boa.png" class="avatar avatar-sm me-3">
-                    <h6 class="text-white d-lg-inline">Bank of America</h6>
+                    <h6 class="text-white d-inline">Bank of America</h6>
                   </div>
-                  <div class="col-6 text-end">
+                  <div class="col-2 text-end">
                     <i class="bi bi-three-dots text-white me-2"></i>
                   </div>
                 </div>
@@ -572,6 +461,7 @@
                     </tr>
                   </tbody>
                 </table>
+                <p class="text-xs m-0 ps-2" style="color: #ccc"><span class="badge badge-sm custom-badge-green text-xxs">Linked</span>&nbsp;&nbsp;Last checked 5 hours ago</p>
               </div>
             </div>
           </div>
@@ -579,31 +469,9 @@
 
       </div>
       <!-- End Accounts section -->
-
-
-
-
-      
-      
-      <footer class="footer pt-3">
-        <div class="container-fluid">
-          <div class="row align-items-center justify-content-lg-between">
-            <div class="col-lg-6 mb-lg-0 mb-4">
-              <div class="copyright text-center text-sm text-muted text-lg-start">© <script>document.write(new Date().getFullYear())</script> Connor Bowyer | Powered by <span class="font-weight-bold">reywob.net</span>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <ul class="nav nav-footer justify-content-center justify-content-lg-end">
-                <li class="nav-item">
-                  <p class="text-xs mb-0">Version 1.0.0</p>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
   </main>
+
   <div class="fixed-plugin">
     <div class="card shadow-lg">
       <div class="card-header pb-0 pt-3 ">
@@ -679,46 +547,6 @@
   <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
   <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
   <script src="../assets/js/plugins/chartjs.min.js"></script>
-  <script>
-    var ctx1 = document.getElementById("accounts-chart").getContext("2d");
-    new Chart(ctx1, {
-      type: "polarArea",
-      data: {
-        labels: ["Checking", "Savings", "Investing", "Credit Cards", "Loans"],
-        datasets: [{
-          data: [5, 4, 3, 2, 5],
-          backgroundColor: ["#E4A467", "#E46769", "#E467A7", "#E367E4", "#6768E4"],
-          hoverBackgroundColor: ["#BF7C45", "#BF4547", "#BF4593", "#BD42BD", "#494ABD"],
-          borderWidth: 0
-        }],
-      },
-      options: {
-        responsive: true,
-        maintainAspectRatio: false,
-        plugins: {
-          legend: {
-            display: false,
-            position: 'right',
-            labels: {
-              usePointStyle: true, // This option uses Bootstrap point style
-              boxWidth: 8, // Adjust the box width as needed
-            }
-          }
-        },
-        scales: {
-          r: {
-            pointLabels: {
-              display: true,
-              centerPointLabels: true,
-              font: {
-                size: 12
-              }
-            },
-          },
-        }
-      }
-    });
-</script>
   <script>
     var win = navigator.platform.indexOf('Win') > -1;
     if (win && document.querySelector('#sidenav-scrollbar')) {
