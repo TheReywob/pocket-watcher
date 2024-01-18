@@ -225,7 +225,7 @@
 
  
     <div class="container-fluid py-4">
-      <a class="btn bg-gradient-dark mb-3 text-lg" href="javascript:;"><i class="fas fa-plus"></i>&nbsp;&nbsp;Add Account</a>
+      <a class="btn bg-gradient-dark mb-3 text-lg" id="teller-connect"><i class="fas fa-plus"></i>&nbsp;&nbsp;Add Account</a>
       <!-- No accounts message -->
       <h3 class="text-white">No accounts added.</h3>
       <p class="text-white">You haven't added any banks or finance accounts yet. Click <span class="font-weight-bolder">+ Add Account</span> to connect your financial institution with ___.</p>
@@ -541,7 +541,33 @@
       </div>
     </div>
   </div>
-  <!--   Core JS Files   -->
+  <!-- Teller JS -->
+  <script src="https://cdn.teller.io/connect/connect.js"></script>
+  <script>
+    // Initialize & configure the client library
+    document.addEventListener("DOMContentLoaded", function() {
+      var tellerConnect = TellerConnect.setup({
+        applicationId: "app_oq66tor7504nho6om4000",
+        onInit: function() {
+          console.log("Teller Connect has initilized");
+        },
+        // Handle a successful enrollment's accessToken
+        onSuccess: function(enrollment) {
+          console.log("User enrolled successfully", enrollment.accessToken);
+        },
+        // Handle the Teller Connect being closed prematurely
+        onExit: function() {
+          console.log("User closed Teller Connect");
+        }
+      });
+      // Listener for the "+ Add Account" button
+      var el = document.getElementById("teller-connect");
+      el.addEventListener("click", function() {
+        tellerConnect.open();
+      });
+    });
+  </script>
+  <!-- Core JS Files -->
   <script src="../assets/js/core/popper.min.js"></script>
   <script src="../assets/js/core/bootstrap.min.js"></script>
   <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
